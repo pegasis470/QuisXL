@@ -34,7 +34,7 @@ def signup(user: UserCreate, db: Session = Depends(get_db)):
         username=user.username,
         password_hash=hashed_password,
         auth_token = genrate_auth_token(AUTH_KEY),
-        status = "Online"
+        status = "Offline"
         )
     db.add(new_user)
     db.commit()
