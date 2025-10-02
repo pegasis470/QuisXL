@@ -29,6 +29,7 @@ def make_quiz(quiz: QuizCreate , db: Session = Depends(get_db)):
         data=[{
             "qus_no": q.qus_no,
             "question": q.qustion,
+            "options": [{"A": opt.A, "B": opt.B, "C": opt.C, "D": opt.D} for opt in q.options],
             "answer": q.answer,
             "marks": q.marks
         } for q in quiz.qustions]
