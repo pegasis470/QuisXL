@@ -19,10 +19,10 @@ class validateLogin(BaseModel):
     auth_token: str
 
 class options(BaseModel):
-    optionA: str
-    optionB: str
-    optionC: str | None = None
-    optionD: str | None = None
+    A: str
+    B: str
+    C: str | None = None
+    D: str | None = None
 
 class Qustion(BaseModel):
     qus_no: int
